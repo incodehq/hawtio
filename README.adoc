@@ -1,4 +1,5 @@
 = Hawt.io
+:toc:
 
 This project creates a Docker image of link:https://hawt.io[hawt.io], a modular console for managing Java apps.
 
@@ -16,7 +17,7 @@ To run the Docker image locally, use:
 ----
 export TAG=...
 
-docker run -p8080:8080 incodehq/hawtio:$TAG
+docker run -d -p8080:8080 incodehq/hawtio:$TAG
 ----
 
 where `$TAG` is set to one of the images from the https://cloud.docker.com/u/incodehq/repository/docker/incodehq/hawtio/tags[tags page].
@@ -25,6 +26,14 @@ This exposes :
 
 * the UI at port 8080 (that is, link:http://localhost:8080[]])
 
+
+== Preconfigured Connections
+
+Unfortunately hawt.io does _not_  currently allow connections to be pre-configured; see for example link:https://github.com/hawtio/hawtio/issues/1965[this] and link:https://github.com/hawtio/hawtio/issues/2268[this].
+The only feature that is available is to invoke a URL which provides the connection parameters, as described link:https://github.com/hawtio/hawtio-java/issues/6#issuecomment-115295037[here].
+
+That said, hawt.io _does_ remember previous connections in the browser local storage.
+So, if you use the same browser to connect, then hawt.io will remember where you connected to previously.
 
 
 == Further Reading
