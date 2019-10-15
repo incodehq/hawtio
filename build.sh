@@ -14,6 +14,7 @@ echo "building:"
 echo "  $IMAGE:$NOW"
 echo ""
 
-#docker build -t $IMAGE:$NOW ./
+docker build -t $IMAGE:$NOW ./
+docker tag $IMAGE:$NOW $IMAGE:latest
 #docker push $IMAGE:$NOW
 
