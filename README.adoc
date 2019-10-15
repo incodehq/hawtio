@@ -1,0 +1,36 @@
+= Hawt.io
+
+This project creates a Docker image of link:https://hawt.io[hawt.io], a modular console for managing Java apps.
+
+The image currently does not support any configuration options, it simply runs the module without security.
+
+The Docker image of this app is available at https://hub.docker.com/r/incodehq/hawtio[Docker hub].
+
+
+
+== Running Locally
+
+To run the Docker image locally, use:
+
+[source,bash]
+----
+export TAG=...
+
+docker run -p8080:8080 incodehq/hawtio:$TAG
+----
+
+where `$TAG` is set to one of the images from the https://cloud.docker.com/u/incodehq/repository/docker/incodehq/hawtio/tags[tags page].
+
+This exposes :
+
+* the UI at port 8080 (that is, link:http://localhost:8080[]])
+
+
+
+== Further Reading
+
+Additional info at:
+
+* link:https://hawt.io[hawt.io] website
+
+
