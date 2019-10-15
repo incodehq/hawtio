@@ -16,5 +16,5 @@ echo ""
 
 docker build -t $IMAGE:$NOW ./
 docker tag $IMAGE:$NOW $IMAGE:latest
-#docker push $IMAGE:$NOW
+docker push $IMAGE:$NOW
 
