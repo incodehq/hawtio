@@ -2,4 +2,5 @@
 
 echo "starting hawt.io:"
 
-java -jar /opt/hawtio/hawtio-app.jar
+# run at root context path
+java -jar /opt/hawtio/hawtio-app.jar -c /

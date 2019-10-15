@@ -38,6 +38,7 @@ RUN ln -s $HAWTIO_HOME/$HAWTIO_APP_VERSION_JAR $HAWTIO_HOME/$HAWTIO_APP_JAR && \
 COPY src/entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
+#don't run as hawtio after all, not sure if able to start port as that user?
 #USER $HAWTIO_USER
 EXPOSE $PORT
 
